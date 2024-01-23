@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { AccountService } from './_services/account.service';
 import { User } from './_models/user';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title: string = 'Dating App';
+  http = inject(HttpClient);
 
   constructor(private accountService: AccountService) {}
 
