@@ -6,6 +6,7 @@ import { User } from './_models/user';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { HttpClient } from '@angular/common/http';
     CommonModule, 
     NavComponent,
     HomeComponent,
-    RouterModule
+    RouterModule,
+    NgxSpinnerModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
