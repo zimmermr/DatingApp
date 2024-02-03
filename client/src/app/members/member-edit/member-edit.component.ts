@@ -9,6 +9,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { GalleryModule } from 'ng-gallery';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { PhotoEditorComponent } from '../photo-editor/photo-editor.component';
 
 @Component({
   selector: 'app-member-edit',
@@ -17,7 +18,8 @@ import { ToastrService } from 'ngx-toastr';
     CommonModule,
     TabsModule,
     GalleryModule,
-    FormsModule
+    FormsModule,
+    PhotoEditorComponent
   ],
   templateUrl: './member-edit.component.html',
   styleUrl: './member-edit.component.css'
