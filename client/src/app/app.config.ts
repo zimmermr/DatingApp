@@ -8,6 +8,7 @@ import { provideToastr } from 'ngx-toastr';
 import { errorInterceptor } from './_interceptors/error.interceptor';
 import { jwtInterceptor } from './_interceptors/jwt.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { loadingInterceptor } from './_interceptors/loading.interceptor';
 
 export const appConfig: ApplicationConfig = {
@@ -25,6 +26,7 @@ export const appConfig: ApplicationConfig = {
     }),
     importProvidersFrom(NgxSpinnerModule.forRoot({
       type: 'line-scale-party'
-    }))
+    })),
+    importProvidersFrom(BsDatepickerModule.forRoot())
   ]
 };
